@@ -21,9 +21,10 @@ function Contact() {
         <header className="mb-10 text-center">
         <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">Contact</h1>
         
-    <p className="text-gray-500 dark:text-gray-400">
-    Have some big idea or brand to develop and need help? Then reach out we'd love to hear about your project and provide help
-    </p>        
+        <p className="text-gray-500 dark:text-gray-400">
+  Have some big idea or brand to develop and need help? Then reach out, we&apos;d love to hear about your project and provide help.
+</p>
+      
       </header>
 
 
