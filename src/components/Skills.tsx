@@ -5,6 +5,7 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card"
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 
 function Skills() {
@@ -62,7 +63,7 @@ function Skills() {
           key={index} className="flex flex-col items-center text-center">
 
             <HoverCard>
-  <HoverCardTrigger>            <img
+  <HoverCardTrigger>            <Image
               alt={skill.Item}
               className="mb-4 rounded-full"
               height={50}

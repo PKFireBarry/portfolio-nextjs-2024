@@ -19,7 +19,9 @@ function About() {
       </p>
       
     </div>
-    <Button><a href='/#projects'>Projects</a></Button>
+    <Button>
+  <a href="/#projects">Projects</a>
+</Button>
   </main>
   )
 }

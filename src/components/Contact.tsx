@@ -42,28 +42,28 @@ function Contact() {
 
 
           <a target="_blank" href="https://drive.google.com/file/d/1q3wYHTx3Mac9t0_cjzqrhAWDg3hyhiG5/view?usp=share_link">
-      <DocumentTextIcon className="w-[33px] h-[33px] text-black cursor-pointer animate-pulse hover:text-blue-600 hover:underline" />
-    </a>
+  <DocumentTextIcon className="w-[33px] h-[33px] text-black cursor-pointer animate-pulse hover:text-blue-600 hover:underline" />
+</a>
 
-    <a target="_blank" href='https://www.linkedin.com/in/darion-george/'>
-      <Image
-          height={33}
-          width={33}
-          className=" w-[33px] h-[33px] mx-4"
-          alt=""
-          src={linkedin}
-        />      
-    </a>
+<a target="_blank" href="https://www.linkedin.com/in/darion-george/">
+  <Image
+    height={33}
+    width={33}
+    className=" w-[33px] h-[33px] mx-4"
+    alt=""
+    src={linkedin}
+  />
+</a>
 
-    <a target="_blank" href='https://github.com/PKFireBarry'>
-      <Image
-          height={33}
-          width={33}
-          className=" w-[33px] h-[33px]"
-          alt=""
-          src={github}
-        />      
-    </a>
+<a target="_blank" href="https://github.com/PKFireBarry">
+  <Image
+    height={33}
+    width={33}
+    className=" w-[33px] h-[33px]"
+    alt=""
+    src={github}
+  />
+</a>
 
           </div>
         </div>

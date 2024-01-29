@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from './ui/button'
+import Image from 'next/image'
 
 
 const projects = [
@@ -56,7 +57,7 @@ function Projects() {
       <div className="grid gap-8 ">
           {projects.slice().reverse().map((project, index) => (
             <div key={index} className="flex flex-col items-center bg-gray-300 dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
-              <img
+              <Image
                 alt={`Project ${index + 1}`}
                 className="w-full h-60 object-cover"
                 height="300"
