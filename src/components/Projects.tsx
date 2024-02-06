@@ -56,7 +56,7 @@ function Projects() {
       </header>
       <div className="grid gap-8">
           {projects.slice().reverse().map((project, index) => (
-            <div key={index} className="flex outline flex-col items-center bg-gray-300 dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+            <div key={index} className="flex outline flex-col items-center bg-gray-300 dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:scale-90 transition-all">
               <Image
                 alt={`Project ${index + 1}`}
                 className="w-full h-60 object-cover"

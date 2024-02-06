@@ -85,6 +85,10 @@ function Hero({}: Props) {
           <div className="container px-4 md:px-6">
             <div className="flex z-0 flex-col items-center space-y-4 text-center">
               <motion.div
+                    initial={{ opacity: 0, x: 1000 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: .85 }}
+                    
                 drag
                 dragConstraints={{
                   top: -50,

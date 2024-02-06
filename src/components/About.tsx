@@ -15,9 +15,9 @@ function About() {
       />
     </div>
     <h1 className="text-3xl animate-pulse font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">About Me?</h1>
-    <p>Creator | Developer | Hardware Enthusiast</p>
+    <p className='hidden sm:block'>Creator | Developer | Hardware Enthusiast</p>
     <div className="w-full max-w-[600px] px-4 md:px-6 lg:px-8">
-    <p className="text-gray-500 tracking-wider md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+    <p className="text-gray-500  tracking-wider md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
   Hello! I&apos;m Darion George, a developer based in Tampa, FL. I have a strong foundation in Javascript and Web development, I want to bring creativity and technical expertise to every project I undertake. I specialize in a variety of languages and frameworks, including TypeScript/Javascript, Python, SQL, and GraphQL. My toolkit also includes React.JS, Next.JS, Node.JS, Tailwind CSS, Framer-Motion, Jest, Django, Flask, PostgreSQL, Firebase, and Sanity.io with new skills constantly on the horizon. Here I want try to showcase a variety of full-stack projects, including PrompterWave, A Really Cool Blog, and Cover Letter Writer.
 </p>
 

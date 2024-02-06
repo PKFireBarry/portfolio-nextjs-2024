@@ -40,7 +40,7 @@ function Timeline() {
             <div className="absolute top-0 left-1/2 w-0.5 h-full bg-gray-300 dark:bg-gray-600" />
             <div className="relative w-ful">
               {events.map((event, index) => (
-                <div key={index} className={`flex items-start  justify-between mb-8  ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                <div key={index} className={`flex items-start  justify-between mb-8 hover:scale-90 transition-all ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                   <div className="px-6 rounded-xl bg-[#0d5d8c] py-4  outline w-4/6">
                     <h3 className="text-xl font-bold">{event.time}</h3>
                     <h4 className="text-lg text-white underline font-semibold  dark:text-gray-400">
