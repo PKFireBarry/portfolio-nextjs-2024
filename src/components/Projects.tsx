@@ -52,11 +52,11 @@ function Projects() {
     <main className="w-full max-w-3xl p-4">
     <header className="my-10 text-center">
         <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">Projects</h1>
-        <p className="text-gray-500 dark:text-gray-400">Sometimes you just have to build it yourself</p>
+        <p className="text-gray-500 dark:text-gray-400 m-4">Sometimes you just have to build it yourself</p>
       </header>
-      <div className="grid gap-8 ">
+      <div className="grid gap-8">
           {projects.slice().reverse().map((project, index) => (
-            <div key={index} className="flex flex-col items-center bg-gray-300 dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+            <div key={index} className="flex outline flex-col items-center bg-gray-300 dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
               <Image
                 alt={`Project ${index + 1}`}
                 className="w-full h-60 object-cover"

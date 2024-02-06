@@ -32,7 +32,7 @@ function Timeline() {
     <div id='timeline' className="flex flex-col items-center justify-center min-h-screen bg-white mt-8 rounded-3xl dark:bg-gray-900 w-[60%]">
       <header className="my-10 text-center">
         <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl underline">Timeline</h1>
-        <p className="text-gray-500 dark:text-gray-400">A timeline of my work</p>
+        <p className="text-gray-500 dark:text-gray-400 m-4">A timeline of my work</p>
       </header>
       <main className="flex flex-col items-center justify-center px-4 md:px-6">
         <div className="w-full max-w-2xl">
