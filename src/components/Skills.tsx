@@ -127,6 +127,16 @@ function Skills() {
       Description: "A testing library for javascript",
       Icon: "https://cdn.worldvectorlogo.com/logos/jest-2.svg",
     },
+    {
+      Item: "Vercel",
+      Description: "An open-source web hosting platform that offers serverless functions",
+      Icon: "https://cdn.worldvectorlogo.com/logos/vercel.svg"
+    },
+    {
+      Item: "Selenium",
+      Description: "An open source framework for automating web applications for testing purposes.",
+      Icon: "https://cdn.worldvectorlogo.com/logos/selenium-1.svg"
+    }
   ];
 
   function getRandomNumber() {
@@ -143,38 +153,35 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="flex flex-col w-[60%] items-center justify-center min-h-screen py-12 bg-white mt-8 rounded-3xl dark:bg-gray-800"
+      className="flex flex-col w-[60%] items-center justify-center min-h-screen py-12  mt-8 rounded-3xl bg-gray-500"
     >
       <header className="mb-10 text-center">
         <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl underline">
           Tools of the trade
         </h1>
-        <p className="text-gray-500 dark:text-gray-400 m-4">
+        <p className="text-white dark:text-gray-400 m-4">
           Some skills used in my projects
         </p>
       </header>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 ">
         {skills.map((skill, index) => (
-          <div key={index} className="flex flex-col items-center text-center">
-            <HoverCard>
-              <HoverCardTrigger>
-                {" "}
-                <Image
-                  alt={skill.Item}
-                  className="mb-4 rounded-full"
-                  height={50}
-                  src={skill.Icon}
-                  style={{
-                    aspectRatio: "100/100",
-                    objectFit: "cover",
-                  }}
-                  width={50}
-                />
-                <h2 className="text-xl font-semibold">{skill.Item}</h2>
-              </HoverCardTrigger>
-              <HoverCardContent>{skill.Description}</HoverCardContent>
-            </HoverCard>
-          </div>
+          <div key={index} className="flex scale-75 flex-col items-center text-center hover:scale-100 rounded-xl outline bg-white transition-all hover:m-4">
+  <HoverCard >
+    <HoverCardTrigger>
+      <div className="relative w-24 h-24 mb-4">
+        <Image
+          alt={skill.Item}
+          className="rounded-full object-cover w-full h-full"
+          src={skill.Icon}
+          layout="fill"
+        />
+      </div>
+      <h2 className="text-xl font-semibold">{skill.Item}</h2>
+    </HoverCardTrigger>
+    <HoverCardContent className="text-gray-700 z-0">{skill.Description}</HoverCardContent>
+  </HoverCard>
+</div>
+
         ))}
       </div>
     </section>

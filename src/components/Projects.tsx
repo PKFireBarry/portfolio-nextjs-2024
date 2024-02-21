@@ -40,7 +40,7 @@ const projects = [
     title: 'PrompterWave',
     description: 'The journey of PrompterWave began with a personal struggle, a challenge I faced in achieving good stable diffusion prompts. I found myself lacking the creative spark to generate interesting subjects that aligned seamlessly with my initial concepts. This gap between imagination and execution led me to envision a solution, and thats how PrompterWave came into existence.',
     stack: 'eslint, reactjs, nextjs, openai, firebase-database, tailwindcss, framer-motion, shadcn-ui',
-    link: 'https://github.com/PKFireBarry/PrompterWave',
+    link: 'https://github.com/PKFireBarry/PrompterWave1.1',
     photo: 'https://i.ibb.co/8zH7RXD/Screenshot-from-2024-01-28-22-36-02.png',
     website: 'https://prompter-wave.vercel.app/',
   }

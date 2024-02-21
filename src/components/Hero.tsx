@@ -154,11 +154,28 @@ function Hero({}: Props) {
 
               <HoverCard>
                 <HoverCardTrigger>
+
+                  <motion.div
+                  initial={{ opacity: 0, x: -1000 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: .85, delay: .75 }}
+                  drag
+                  dragConstraints={{
+                    top: -50,
+                    left: -50,
+                    right: 50,
+                    bottom: 50,
+                  }}
+                  
+
+                  >
                   <Image
                     alt="Hero"
                     className="rounded-full outline delay-200 mx-auto transform w-[300px] h-[300px] sm:w-[374px] sm:h-[374px] my-4 object-cover "
                     src={desert}
-                  />
+                  />                    
+                  </motion.div>
+
                 </HoverCardTrigger>
                 <HoverCardContent className="outline">
                   <p className="font-bold">Whoa</p> you hovered over me? Well, I
@@ -167,14 +184,26 @@ function Hero({}: Props) {
                 </HoverCardContent>
               </HoverCard>
               <div className="z-20">
-                <div className="mt-8">
+                <motion.div className="mt-8"
+                  initial={{ opacity: 0, y: 1000 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: .85, delay:1 }}
+                  drag
+                  dragConstraints={{
+                    top: -50,
+                    left: -50,
+                    right: 50,
+                    bottom: 50,
+                  }}
+                  
+                >
                   <h1 className="">
                     <Button className="  hover:outline shadow-2xl px-8 text-lg md:text-xl lg:text-2xl hover:scale-125 transition-all bg-[#0d5d8c] outline text-black">
                       {text}
                       <Cursor cursorColor="black" />
                     </Button>
                   </h1>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
