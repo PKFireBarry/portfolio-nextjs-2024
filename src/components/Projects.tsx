@@ -1,6 +1,9 @@
 import React from 'react'
-import { Button } from './ui/button'
+
 import Image from 'next/image'
+import { PinContainer } from './3d-pin'
+import { MovingBorder } from './moving-border'
+import { Button } from "./moving-border";
 
 
 const projects = [
@@ -55,6 +58,7 @@ function Projects() {
         <p className="text-gray-500 dark:text-gray-400 m-4">Sometimes you just have to build it yourself</p>
       </header>
       <div className="grid gap-8">
+        
           {projects.slice().reverse().map((project, index) => (
             <div key={index} className="flex outline flex-col items-center bg-gray-300 dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:scale-90 transition-all">
               <Image
@@ -75,6 +79,9 @@ function Projects() {
                 <div className='flex justify-between my-2'>
                   <Button>
                     <a target="_blank" rel="noopener noreferrer" href={project.link}>View on GitHub</a>
+                  </Button>
+                  <Button>
+                    <a target="_blank" rel="noopener noreferrer" href={project.website}>Check Demo Video</a>
                   </Button>
                   <Button>
                     <a target="_blank" rel="noopener noreferrer" href={project.website}>Visit the Website</a>

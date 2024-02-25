@@ -13,6 +13,12 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import { CardBody, CardContainer, CardItem } from "./3d-card";
+import { HeroCard } from "./HeroCard";
+import { BackgroundBeams } from "./background-beams";
+
+
+
 
 type Props = {};
 
@@ -73,17 +79,21 @@ function Hero({}: Props) {
   }, []);
 
   return (
-    <motion.div
+    <>
+    
+<motion.div
       initial={{ opacity: 0, y: -500 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.75 }}
 
-      className="flex my-4 w-[60%] flex-col min-h-screen items-center justify-center space-y-6 py-12 md:py-24 lg:py-32 rounded-3xl bg-slate-50"
+      className="flex z-20 my-4 w-[60%] flex-col min-h-screen items-center justify-center space-y-6 py-12 md:py-24 lg:py-32 rounded-3xl bg-stone-50"
     >
+      
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex z-0 flex-col items-center space-y-4 text-center">
+              
               <motion.div
                     initial={{ opacity: 0, x: 1000 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -96,7 +106,7 @@ function Hero({}: Props) {
                   right: 50,
                   bottom: 50,
                 }}
-                className="space-y-2 mb-12 outline rounded-xl p-4 bg-[#0d5d8c]"
+                className="space-y-2 mb-12 border outline rounded-xl p-4 bg-[#0d5d8c]"
               >
                 <h1
                   className="text-3xl underline font-bold tracking-widest sm:text-4xl md:text-5xl mb-4 lg:text-6xl
@@ -150,6 +160,27 @@ function Hero({}: Props) {
                 >
                   {letters}
                 </p>
+                
+              </motion.div>
+
+                  <div className="">
+                    <Button className="  hover:outline shadow-2xl px-8 text-lg md:text-xl lg:text-2xl hover:scale-125 transition-all bg-[#0d5d8c] outline text-black">
+                      {text}
+                      <Cursor cursorColor="black" />
+                    </Button>
+                  </div>
+
+              <motion.div
+                drag
+                dragConstraints={{
+                  top: -0,
+                  left: -0,
+                  right: 0,
+                  bottom: 0,
+                }}
+                              
+              >
+              <HeroCard/>                
               </motion.div>
 
               <HoverCard>
@@ -161,20 +192,18 @@ function Hero({}: Props) {
                   transition={{ duration: .85, delay: .75 }}
                   drag
                   dragConstraints={{
-                    top: -50,
-                    left: -50,
-                    right: 50,
-                    bottom: 50,
+                    top: -0,
+                    left: -0,
+                    right: 0,
+                    bottom: 0,
                   }}
                   
 
                   >
-                  <Image
-                    alt="Hero"
-                    className="rounded-full outline delay-200 mx-auto transform w-[300px] h-[300px] sm:w-[374px] sm:h-[374px] my-4 object-cover "
-                    src={desert}
-                  />                    
+                  
                   </motion.div>
+                  
+              
 
                 </HoverCardTrigger>
                 <HoverCardContent className="outline">
@@ -197,19 +226,16 @@ function Hero({}: Props) {
                   }}
                   
                 >
-                  <h1 className="">
-                    <Button className="  hover:outline shadow-2xl px-8 text-lg md:text-xl lg:text-2xl hover:scale-125 transition-all bg-[#0d5d8c] outline text-black">
-                      {text}
-                      <Cursor cursorColor="black" />
-                    </Button>
-                  </h1>
+
                 </motion.div>
               </div>
             </div>
           </div>
         </section>
       </main>
-    </motion.div>
+    </motion.div>    
+    </>
+    
   );
 }
 

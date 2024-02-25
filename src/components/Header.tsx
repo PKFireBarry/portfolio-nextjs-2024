@@ -11,7 +11,7 @@ import linkedin from '../app/linkedin.svg'
 
 function Header() {
   return (
-    <header className="sticky hover:scale-125 transition-all top-5 h-[33px] w-[95%] flex items-center justify-between max-w-6xl mx-auto z-20 p-5 bg-ghostwhite rounded-full border-4 bg-white border-black">
+    <header className="sticky hover:scale-125 transition-all top-5 h-[33px] w-[95%] flex items-center justify-between max-w-6xl mx-auto z-30 p-5 bg-ghostwhite rounded-full border-4 bg-white  border-black">
   <div
 
     className="flex flex-row items-center "
