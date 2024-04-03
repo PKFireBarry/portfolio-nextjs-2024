@@ -8,16 +8,16 @@ import { CardBody, CardContainer, CardItem } from "../components/3d-card";
 export function HeroCard() {
   return (
     <CardContainer className="inter-var">
-      <CardBody className="bg-gray-200 relative text-center items-center group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+      <CardBody className="bg-gradient-to-r from-gray-400 via-blue-500 to-teal-500 text-black relative text-center items-center group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
         <CardItem
           translateZ="40"
-          className="text-xl text-center flex w-full justify-center font-bold text-neutral-600 dark:text-white"
+          className="text-xl text-center flex w-full justify-center font-bold  dark:text-white"
         >Sometimes you Just Have To Build It
         </CardItem>
         <CardItem
           as="p"
           translateZ="60"
-          className="text-neutral-500 text-center flex w-full justify-center text-sm  mt-2 dark:text-neutral-300"
+          className=" text-center flex w-full justify-center text-sm  mt-2 dark:text-neutral-300"
         >
           Hover over this card to unleash my wizard powers
         </CardItem>
@@ -38,11 +38,11 @@ export function HeroCard() {
         <CardItem
           as="p"
           translateZ="30"
-          className="text-neutral-500 text-center flex w-full mt-20 justify-center text-sm  dark:text-neutral-300"
+          className=" text-center flex w-full mt-20 justify-center text-sm  dark:text-neutral-300"
         >
           Explore the frontend for hidden animations! Hunt them down now for an interactive experience!
         </CardItem>
-        <div className="flex text-neutral-500 justify-center items-center ">
+        <div className="flex  justify-center items-center ">
         
         </div>
       </CardBody>

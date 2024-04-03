@@ -16,7 +16,7 @@ import {
 
 function Contact() {
   return (
-    <div id='contact' className='flex flex-col items-center justify-center min-h-screen bg-white mt-8 rounded-3xl dark:bg-gray-900 w-[60%]'>
+    <div id='contact' className='flex z-20 my-4 w-[60%] flex-col min-h-screen min-w-[400px] bg-white mt-8 rounded-3xl dark:bg-gray-900'>
         <div className="space-y-2">
         <header className="mb-10 text-center">
         <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">Contact</h1>
@@ -68,11 +68,11 @@ function Contact() {
 
           </div>
         </div>
-<div className="space-y-4 py-4">
+<form className="space-y-4 py-4">
     <div className="grid grid-cols-2  gap-4">
       <div className="space-y-2">
         <Label htmlFor="first-name">First name</Label>
-        <Input id="first-name" className='bg-white' placeholder="Enter your first name" />
+        <Input id="first-name" required className='bg-white' placeholder="Enter your first name" />
       </div>
       <div className="space-y-2">
         <Label htmlFor="last-name">Last name</Label>
@@ -81,7 +81,7 @@ function Contact() {
     </div>
     <div className="space-y-2">
       <Label htmlFor="email">Email</Label>
-      <Input id="email" className='bg-white' placeholder="Enter your email" type="email" />
+      <Input id="email" required className='bg-white' placeholder="Enter your email" type="email" />
     </div>
     <div className="space-y-2">
       <Label htmlFor="subject">Subject</Label>
@@ -89,10 +89,10 @@ function Contact() {
     </div>
     <div className="space-y-2">
       <Label htmlFor="message">Message</Label>
-      <Textarea className="min-h-[100px] bg-white" id="message" placeholder="Enter your message" />
+      <Textarea required className="min-h-[100px] bg-white" id="message" placeholder="Enter your message" />
     </div>
     <Button>Send message</Button>
-  </div>        
+  </form>        
         </div>
   </div>
   

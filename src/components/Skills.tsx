@@ -154,7 +154,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="hidden md:block flex flex-col w-[60%] items-center justify-center min-h-screen py-12  mt-8 rounded-3xl bg-gray-200"
+      className="hidden md:block flex flex-col z-20 my-4 w-[60%] min-h-screen min-w-[400px] py-12  mt-8 rounded-3xl bg-gray-200"
     >
       <header className="mb-10 text-center">
         <h1 className="text-3xl  font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl underline">

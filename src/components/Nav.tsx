@@ -19,7 +19,7 @@ function Nav() {
   return (
     
 <div className='w-full sticky justify-end top-8 right-0 p-4 flex  animate-bounce'>
-    <Button>
+    <Button className=''>
 
         <Sheet>
   <SheetTrigger>Menu</SheetTrigger>

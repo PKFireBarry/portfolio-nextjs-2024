@@ -51,7 +51,7 @@ const projects = [
 
 function Projects() {
   return (
-    <div id='projects' className="flex w-[60%] flex-col items-center justify-center min-h-screen bg-white mt-8 rounded-3xl dark:bg-gray-900">
+    <div id='projects' className="flex z-20 my-4 w-[60%] flex-col min-h-screen min-w-[400px] items-center justify-center bg-white mt-8 rounded-3xl dark:bg-gray-900">
     <main className="w-full max-w-3xl p-4">
     <header className="my-10 text-center">
         <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">Projects</h1>
