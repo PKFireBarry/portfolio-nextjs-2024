@@ -31,11 +31,11 @@ function Timeline() {
   ];
 
   return (
-    <div id='timeline' className="flex z-20 my-4 w-[60%] flex-col min-h-screen min-w-[400px] bg-white mt-8 rounded-3xl dark:bg-gray-900">
+    <div id='timeline' className="flex z-20 my-4 w-[60%] flex-col min-h-screen min-w-[400px] bg-[#000000] text-[#e3fbf9] mt-8 rounded-3xl dark:bg-gray-900">
       
       <header className="my-10 text-center">
   <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl underline">Timeline</h1>
-  <p className="text-gray-500 dark:text-gray-400 m-4">A timeline of my work</p>
+  <p className=" m-4">A timeline of my work</p>
 </header>
 <main className="flex flex-col items-center justify-center px-4 md:px-6">
   <div className="w-full max-w-2xl">
@@ -45,11 +45,11 @@ function Timeline() {
         {events.map((event, index) => (
           <div key={index} className={`flex items-start justify-between mb-8 hover:shadow-xl hover:scale-110 transition-all ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
             <div className="px-6 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 dark:from-purple-500 dark:to-purple-800 py-4 w-4/6">
-              <h3 className="text-xl font-bold text-white">{event.time}</h3>
-              <h4 className="text-lg text-white underline font-semibold">
+              <h3 className="text-xl font-bold text-[#e3fbf9]">{event.time}</h3>
+              <h4 className="text-lg text-[#e3fbf9] underline font-semibold">
                 {event.name}
               </h4>
-              <p className="text-sm text-white">
+              <p className="text-sm text-[#e3fbf9]">
                 {event.description}
               </p>
             </div>

@@ -51,16 +51,16 @@ const projects = [
 
 function Projects() {
   return (
-    <div id='projects' className="flex z-20 my-4 w-[60%] flex-col min-h-screen min-w-[400px] items-center justify-center bg-white mt-8 rounded-3xl dark:bg-gray-900">
+    <div id='projects' className="flex z-20 my-4 w-[60%] flex-col min-h-screen min-w-[400px] items-center justify-center bg-[#000000] text-[#e3fbf9] mt-8 rounded-3xl">
     <main className="w-full max-w-3xl p-4">
     <header className="my-10 text-center">
         <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">Projects</h1>
-        <p className="text-gray-500 dark:text-gray-400 m-4">Sometimes you just have to build it yourself</p>
+        <p className=" dark:text-gray-400 m-4">Sometimes you just have to build it yourself</p>
       </header>
       <div className="grid gap-8">
         
           {projects.slice().reverse().map((project, index) => (
-            <div key={index} className="flex outline flex-col items-center bg-gray-300 dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:scale-90 transition-all">
+            <div key={index} className="flex outline flex-col items-center bg-[#031111] dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:scale-90 transition-all">
               <Image
                 alt={`Project ${index + 1}`}
                 className="w-full h-60 object-cover"
@@ -75,7 +75,7 @@ function Projects() {
               <div className="p-4">
                 <h2 className="text-2xl font-bold">{project.title}</h2>
                 <h2 className="text-sm font-bold my-2">Tech: {project.stack}</h2>
-                <p className="text-gray-600 dark:text-gray-400">{project.description}</p>
+                <p className=" dark:text-gray-400">{project.description}</p>
                 <div className='flex justify-between my-2'>
                   <Button>
                     <a target="_blank" rel="noopener noreferrer" href={project.link}>View on GitHub</a>

@@ -16,22 +16,19 @@ import {
 
 function Contact() {
   return (
-    <div id='contact' className='flex z-20 my-4 w-[60%] flex-col min-h-screen min-w-[400px] bg-white mt-8 rounded-3xl dark:bg-gray-900'>
+    <div id='contact' className='flex justify-center items-center  z-20 my-4 w-[60%] flex-col min-h-screen min-w-[400px] bg-[#000000] text-[#e3fbf9] mt-8 rounded-3xl'>
         <div className="space-y-2">
+
         <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">Contact</h1>
+        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl mt-8">Contact</h1>
         
-        <p className="text-gray-500 dark:text-gray-400">
+        <p className=" text-md font-light  flex justify-center items-center  dark:text-gray-400">
   Have some big idea or brand to develop and need help? Then reach out, we&apos;d love to hear about your project and provide help.
 </p>
       
       </header>
 
-
-
-    <div className="mt-8 w-full px-8 bg-gray-300 rounded-lg shadow-md dark:bg-gray-800">
-
-        <div className="py-4 text-sm text-gray-700 dark:text-gray-200">
+      <div className="py-4 text-sm mx-8 rounded-3xl flex flex-col justify-center text-center items-center bg-[#031111] ">
           <p>
             <span className="font-semibold">Email:</span> barry0719@gmail.com
           </p>
@@ -43,7 +40,7 @@ function Contact() {
 
 
           <a target="_blank" href="https://drive.google.com/file/d/1q3wYHTx3Mac9t0_cjzqrhAWDg3hyhiG5/view?usp=share_link">
-  <DocumentTextIcon className="w-[33px] h-[33px] text-black cursor-pointer animate-pulse hover:text-blue-600 hover:underline" />
+  <DocumentTextIcon className="w-[33px] h-[33px] cursor-pointer animate-pulse hover:text-blue-600 hover:underline" />
 </a>
 
 <a target="_blank" href="https://www.linkedin.com/in/darion-george/">
@@ -68,6 +65,10 @@ function Contact() {
 
           </div>
         </div>
+
+
+
+    <div className="m-8 flex rounded-3xl text-center justify-center items-center bg-[#031111] shadow-md">
 <form className="space-y-4 py-4">
     <div className="grid grid-cols-2  gap-4">
       <div className="space-y-2">
@@ -93,7 +94,8 @@ function Contact() {
     </div>
     <Button>Send message</Button>
   </form>        
-        </div>
+    </div>
+
   </div>
   
   </div>

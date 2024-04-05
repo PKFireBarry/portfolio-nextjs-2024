@@ -23,9 +23,10 @@ export default function Home() {
       <Nav/>
       <Hero/>
       <About/>
-      <Timeline/>      
+      <Timeline/> 
+      <Projects/>           
       <Skills/>
-      <Projects/>
+
 
       <Contact/>
 

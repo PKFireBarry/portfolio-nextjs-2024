@@ -154,19 +154,19 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="hidden md:block flex flex-col z-20 my-4 w-[60%] min-h-screen min-w-[400px] py-12  mt-8 rounded-3xl bg-gray-200"
+      className="hidden md:block flex flex-col z-20 my-4 w-[60%] min-h-screen min-w-[400px] py-12  mt-8 rounded-3xl bg-[#000000] text-[#e3fbf9] "
     >
       <header className="mb-10 text-center">
         <h1 className="text-3xl  font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl underline">
           Tools of the trade
         </h1>
-        <p className="text-black dark:text-gray-400 m-4">
+        <p className=" m-4">
           Some skills used in my projects
         </p>
       </header>
       <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 ">
         {skills.map((skill, index) => (
-          <div key={index} className="flex  scale-75 flex-col items-center text-center hover:scale-100 rounded-xl outline bg-[#0d5d8c] transition-all">
+          <div key={index} className="flex  scale-75 flex-col items-center text-center hover:scale-100 rounded-xl outline bg-[#371693] transition-all">
 
                         <PinContainer
                         className="text-black bg-gray-400"

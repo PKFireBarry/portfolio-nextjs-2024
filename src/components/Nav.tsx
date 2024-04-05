@@ -18,7 +18,7 @@ function Nav() {
 
   return (
     
-<div className='w-full sticky justify-end top-8 right-0 p-4 flex  animate-bounce'>
+<div className='w-full sticky justify-end top-20 z-40 right-0 p-4 flex  animate-bounce'>
     <Button className=''>
 
         <Sheet>
