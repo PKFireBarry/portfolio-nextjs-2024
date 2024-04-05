@@ -1,8 +1,7 @@
 import React from 'react'
 
 import Image from 'next/image'
-import { PinContainer } from './3d-pin'
-import { MovingBorder } from './moving-border'
+
 import { Button } from "./moving-border";
 
 

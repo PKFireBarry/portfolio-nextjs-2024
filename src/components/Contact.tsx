@@ -7,11 +7,7 @@ import Image from 'next/image'
 import DocumentTextIcon from '@heroicons/react/24/solid/DocumentTextIcon'
 import github from '../app/github.svg'
 import linkedin from '../app/linkedin.svg'
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card"
+
 
 
 function Contact() {

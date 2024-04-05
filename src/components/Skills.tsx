@@ -1,10 +1,4 @@
 import React from "react";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { PinContainer } from "./3d-pin";
 
