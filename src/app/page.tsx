@@ -25,11 +25,9 @@ export default function Home() {
       <About/>
       <Timeline/> 
       <Projects/>           
-      <Skills/>
-
-
+      <Skills/>s
       <Contact/>
-
+~
     </main>
     </div>
     </>
