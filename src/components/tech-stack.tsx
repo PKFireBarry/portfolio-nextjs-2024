@@ -12,7 +12,7 @@ const techSkills = [
       { name: "TailwindCSS", icon: "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg" },
       { name: "Redux", icon: "https://cdn.worldvectorlogo.com/logos/redux.svg" },
       {name: "svelte", icon: "https://cdn.worldvectorlogo.com/logos/svelte-1.svg"},   
-      { name: "Framer Motion", icon: "https://cdn.worldvectorlogo.com/logos/framer-motion.svg" },
+      { name: "Framer", icon: "https://cdn.worldvectorlogo.com/logos/framer-motion.svg" },
       { name: "Material-UI", icon: "https://cdn.worldvectorlogo.com/logos/material-ui-1.svg" },
 
     ],
@@ -30,6 +30,7 @@ const techSkills = [
       { name: "Azure", icon: "https://cdn.worldvectorlogo.com/logos/azure-1.svg" },
       { name: "Flask", icon: "https://cdn.worldvectorlogo.com/logos/flask.svg" },
       { name: "Firebase", icon: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg" },
+      {name: "Airtable", icon: "https://cdn.worldvectorlogo.com/logos/airtable-1.svg"},
     ],
   },
   {
@@ -43,17 +44,18 @@ const techSkills = [
       { name: "ChatGPT", icon: "https://cdn.worldvectorlogo.com/logos/openai.svg" },
       { name: "GitHub", icon: "https://cdn.worldvectorlogo.com/logos/github.svg" },
       { name: "Vercel", icon: "https://cdn.worldvectorlogo.com/logos/vercel.svg" },
+      { name: "Jest", icon: "https://cdn.worldvectorlogo.com/logos/jest-2.svg" },
 
     ],
   },
   {
-    category: "Tools",
+    category: "Tools/Automation",
     description: "To make my life easier",
     skills: [
       { name: "VS Code", icon: "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" },
       { name: "Postman", icon: "https://cdn.worldvectorlogo.com/logos/postman.svg" },
-      {name: "Airtable", icon: "https://cdn.worldvectorlogo.com/logos/airtable-1.svg"},
-      { name: "Jest", icon: "https://cdn.worldvectorlogo.com/logos/jest-2.svg" },
+
+
       { name: "N8N", icon: "" },
       {name: "Playwright", icon: ""},
       { name: "NPM", icon: "https://cdn.worldvectorlogo.com/logos/npm-2.svg" },
@@ -66,7 +68,7 @@ const techSkills = [
 const TechStack = () => {
   return (
     <div className="w-full px-4 py-8 md:py-16 mx-12">
-      <h2 className="text-2xl md:text-5xl font-bold text-white text-center mb-2 md:mb-4">
+      <h2 className="text-2xl md:text-7xl font-bold text-white text-center mb-2 md:mb-4">
         Tools Of The Trade
       </h2>
       <p className="text-muted-foreground text-center text-sm md:text-base mb-6 md:mb-12">

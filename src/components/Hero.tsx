@@ -19,19 +19,26 @@ const pacifico = Pacifico({
 })
 
 function ElegantShape({
-  className,
+  className = "",
   delay = 0,
   width = 400,
   height = 100,
   rotate = 0,
   gradient = "from-white/[0.08]",
+}: {
+  className?: string;
+  delay?: number;
+  width?: number;
+  height?: number;
+  rotate?: number;
+  gradient?: string;
 }) {
   return (
     <motion.div
       initial={{
         opacity: 0,
-        y: -150,
-        rotate: rotate - 15,
+        y: -450,
+        rotate: rotate - 720,
       }}
       animate={{
         opacity: 1,
@@ -39,7 +46,7 @@ function ElegantShape({
         rotate: rotate,
       }}
       transition={{
-        duration: 2, // Increased duration
+        duration: 1, // Increased duration
         delay,
         ease: "easeInOut", // Changed easing function
         opacity: { duration: 1.5 }, // Slightly increased opacity transition duration
@@ -48,7 +55,7 @@ function ElegantShape({
     >
       <motion.div
         animate={{
-          y: [0, 15, 0],
+          y: [0, 100, 0],
         }}
         transition={{
           duration: 15, // Increased y movement duration
@@ -84,7 +91,7 @@ export default function HeroGeometric({
 }) {
   const fadeUpVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: (i) => ({
+    visible: (i: number) => ({
       opacity: 1,
       y: 0,
       transition: {
