@@ -5,11 +5,6 @@ import { Pacifico } from "next/font/google"
 import Image from "next/image"
 import { cn } from "../lib/utils"
 import React, { useEffect, useState } from "react";
-import { Cursor, useTypewriter } from "react-simple-typewriter";
-
-import { ReloadIcon, Share1Icon, TransformIcon } from "@radix-ui/react-icons";
-import { BookOpenIcon, Square3Stack3DIcon, UserGroupIcon } from "@heroicons/react/24/solid";
-
 import desert from "../app/desert .jpg";
 
 const pacifico = Pacifico({
@@ -24,7 +19,7 @@ function ElegantShape({
   width = 400,
   height = 100,
   rotate = 0,
-  gradient = "from-white/[0.08]",
+  gradient = "from-white/[0.28]",
 }: {
   className?: string;
   delay?: number;
@@ -73,7 +68,7 @@ function ElegantShape({
             "absolute inset-0 rounded-full",
             "bg-gradient-to-r to-transparent",
             gradient,
-            "backdrop-blur-[2px] border-2 border-white/[0.15]",
+            "backdrop-blur-[2px] border-2 border-white/[0.45]",
             "shadow-[0_8px_32px_0_rgba(255,255,255,0.1)]",
             "after:absolute after:inset-0 after:rounded-full",
             "after:bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.2),transparent_70%)]",
@@ -164,9 +159,9 @@ export default function HeroGeometric({
           >
             <Image
               src={desert}
-              height="150"
-              width="150"
-              className="rounded-full object-cover w-[350px] h-[350px]"
+              height="700"
+              width="700"
+              className="rounded-full object-cover w-[350px] h-[350px] hover:scale-110 ease-in-out duration-300"
               alt="thumbnail"
             />
           </motion.div>
@@ -188,7 +183,7 @@ export default function HeroGeometric({
 
           <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
             <p className="text-base sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
-              Hi, I'm an Experienced IT professional with a proven track record of success in developing and implementing technology solutions to improve efficiency, security, and the user experience.
+            Let's Transform Ideas into Powerful Experiences With Tailored Digital Solutions.
             </p>
           </motion.div>
         </div>

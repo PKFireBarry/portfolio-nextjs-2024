@@ -1,14 +1,10 @@
-
-
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
 import Projects from "@/components/Projects";
-import { BackgroundBeams } from "@/components/background-beams";
-import Image from "next/image";
-
+import TechStack from "@/components/tech-stack";
 
 export default function Home() {
   return (
@@ -19,9 +15,10 @@ export default function Home() {
       
       <Header/>
       <Hero/>
-      <Projects/>
+
       <About/>
-           
+      <Projects/>
+      <TechStack/> 
       <Contact/>
     </main>
     </div>

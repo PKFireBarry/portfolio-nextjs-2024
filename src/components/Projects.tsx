@@ -1,10 +1,7 @@
 import React from 'react'
-
 import Image from 'next/image'
-
-import { Button } from "./moving-border";
 import ProjectCard from './project-card';
-import TechStack from './tech-stack';
+
 
 
 
@@ -54,17 +51,36 @@ const projects = [
     image: "https://i.ibb.co/8zH7RXD/Screenshot-from-2024-01-28-22-36-02.png",
     website: "https://prompter-wave.vercel.app/",
   },
+  {
+    title: "Boorkin Industries",
+    description:
+      "",
+    tags: [ "Next.js", "OpenAI", "Firebase", "Tailwind", "Shadcn UI"],
+    link: "",
+    image: "",
+    website: "",
+  },
+  {
+    title: "Automation",
+    description:
+      "",
+    tags: [ "Javascript", "Ollama", "Gmail", "Tailwind", "N8N"],
+    link: "",
+    image: "",
+    website: "",
+  },
 ]
 
 export default function Projects() {
   return (
     <>
+    
     <div className="relative min-h-screen w-full pt-24  overflow-hidden bg-[#030303]">
-      <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-7xl mb-12 text-center text-white">Some Projects</h2>
-      <p className=" flex justify-center text-muted-foreground mt-4 mb-12">
+      <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-7xl  text-center text-white">Some Projects</h2>
+      <p className=" flex justify-center text-muted-foreground mt-4 mb-12 text-lg sm:text-xl text-gray-300">
         Technologies and tools I work 
       </p>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mx-16">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 mx-12">
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
@@ -78,7 +94,7 @@ export default function Projects() {
         ))}
       </div>
       <div className='flex justify-center items-center mt-12'>
-      <TechStack/> 
+      
       </div>
     </div>  
  

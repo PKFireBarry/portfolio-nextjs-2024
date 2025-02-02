@@ -71,7 +71,7 @@ const TechStack = () => {
       <h2 className="text-2xl md:text-7xl font-bold text-white text-center mb-2 md:mb-4">
         Tools Of The Trade
       </h2>
-      <p className="text-muted-foreground text-center text-sm md:text-base mb-6 md:mb-12">
+      <p className="text-muted-foreground text-center md:text-base mb-6 md:mb-12 text-lg sm:text-xl text-gray-300 ">
         Technologies and tools I work with
       </p>
 
@@ -79,7 +79,7 @@ const TechStack = () => {
         {techSkills.map((category) => (
           <div
             key={category.category}
-            className="bg-white rounded-lg shadow-md p-4 md:p-6 transition-transform hover:scale-105"
+            className="bg-white rounded-lg shadow-md p-4 md:p-6 transition-transform hover:scale-105 mx-8"
           >
             <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2 md:mb-4">
               {category.category}
