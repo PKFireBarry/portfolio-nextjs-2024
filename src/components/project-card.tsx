@@ -1,0 +1,51 @@
+import Image from "next/image"
+import Link from "next/link"
+import { Card, CardContent, CardFooter } from './ui/card'
+
+interface ProjectCardProps {
+  title: string
+  description: string
+  image: string
+  link: string
+  tags: string[]
+  website: string
+}
+
+export default function ProjectCard({ title, description, image, link, tags, website }: ProjectCardProps) {
+  return (
+    <Card className="overflow-hidden flex flex-col h-full">
+      <div className="relative aspect-video">
+        <Image
+          src={image || "/placeholder.svg"}
+          alt={title}
+          fill
+          className="object-cover transition-transform hover:scale-105"
+        />
+      </div>
+      <CardContent className="p-4 flex-grow">
+        <h3 className="font-semibold text-xl mb-2">{title}</h3>
+        <p className="text-sm text-muted-foreground mb-4 overflow-hidden" style={{ display: '-webkit-box', WebkitLineClamp: '3', WebkitBoxOrient: 'vertical' }}>
+          {description}
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <span
+              key={tag}
+              className="inline-flex items-center rounded-md bg-muted px-2 py-1 text-xs font-medium ring-1 ring-inset ring-gray-500/10"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </CardContent>
+      <CardFooter className="p-4 pt-0 flex justify-between">
+        <Link href={link} target="_blank" className="inline-flex items-center gap-2 text-sm hover:underline">
+          View on GitHub
+        </Link>
+        <Link href={website} target="_blank" className="inline-flex items-center gap-2 text-sm hover:underline">
+          Visit Website
+        </Link>
+      </CardFooter>
+    </Card>
+  )
+}

@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
 import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
+
 import Timeline from "@/components/Timeline";
 import { BackgroundBeams } from "@/components/background-beams";
 import Image from "next/image";
@@ -25,7 +25,7 @@ export default function Home() {
       <About/>
       <Timeline/> 
       <Projects/>           
-      <Skills/>s
+
       <Contact/>
 ~
     </main>

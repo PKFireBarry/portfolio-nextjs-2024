@@ -6,7 +6,7 @@ import Image from "next/image"
 import { cn } from "../lib/utils"
 import React, { useEffect, useState } from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import { HeroCard } from "./HeroCard";
+
 import { ReloadIcon, Share1Icon, TransformIcon } from "@radix-ui/react-icons";
 import { BookOpenIcon, Square3Stack3DIcon, UserGroupIcon } from "@heroicons/react/24/solid";
 
@@ -39,7 +39,7 @@ function ElegantShape({
         rotate: rotate,
       }}
       transition={{
-        duration: 3, // Increased duration
+        duration: 2, // Increased duration
         delay,
         ease: "easeInOut", // Changed easing function
         opacity: { duration: 1.5 }, // Slightly increased opacity transition duration
@@ -88,7 +88,7 @@ export default function HeroGeometric({
       opacity: 1,
       y: 0,
       transition: {
-        duration: 1.2, // Slowed down fade-up transitions
+        duration: 1.5, // Slowed down fade-up transitions
         delay: 0.5 + i * 0.3,
         ease: "easeInOut", // Changed easing function
       },
