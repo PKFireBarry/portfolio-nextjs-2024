@@ -80,7 +80,7 @@ function ElegantShape({
 export default function HeroGeometric({
   badge = "",
   title1 = "Darion George",
-  title2 = "Web Developer",
+  title2 = "Developer",
 }) {
   const fadeUpVariants = {
     hidden: { opacity: 0, y: 30 },

@@ -59,9 +59,12 @@ const projects = [
 export default function Projects() {
   return (
     <>
-    <div className="container px-4 md:px-6 py-12">
-      <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center text-white">Some Projects</h2>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div className="relative min-h-screen w-full pt-24  overflow-hidden bg-[#030303]">
+      <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-7xl mb-12 text-center text-white">Some Projects</h2>
+      <p className=" flex justify-center text-muted-foreground mt-4 mb-12">
+        Technologies and tools I work 
+      </p>
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mx-16">
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
@@ -75,9 +78,10 @@ export default function Projects() {
         ))}
       </div>
       <div className='flex justify-center items-center mt-12'>
+      <TechStack/> 
       </div>
     </div>  
-    <TechStack/>  
+ 
     </>
 
   )
