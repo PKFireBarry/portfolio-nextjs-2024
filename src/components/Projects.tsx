@@ -71,7 +71,7 @@ export default function Projects() {
       <p className=" flex justify-center text-muted-foreground mt-4 mb-12 text-lg sm:text-xl text-gray-300">
         Technologies and tools I work 
       </p>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 mx-12 bg-white/10">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 mx-12">
         {projects.map((project, index) => (
           <ProjectCard
             key={index}

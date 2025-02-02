@@ -183,7 +183,7 @@ export default function HeroGeometric({
 
           <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
             <p className="text-base sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
-            Let's Transform Ideas into Powerful Experiences With Tailored Digital Solutions.
+            Let`&apos;`s Transform Ideas into Powerful Experiences With Tailored Digital Solutions.
             </p>
           </motion.div>
         </div>
