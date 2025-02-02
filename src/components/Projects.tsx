@@ -70,7 +70,7 @@ export default function Projects() {
     <div className="relative min-h-screen w-full pt-24  overflow-hidden bg-[#030303]">
       <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-7xl  text-center text-white">Some Projects</h2>
       <p className=" flex justify-center text-muted-foreground mt-4 mb-12 text-lg sm:text-xl text-gray-300">
-        Technologies and tools I work 
+        Some drafts of projects I worked on.
       </p>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 mx-12">
         {projects.map((project, index) => (
