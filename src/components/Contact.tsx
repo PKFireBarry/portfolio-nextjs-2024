@@ -14,7 +14,7 @@ function Contact() {
   return (
 
     <>
-                <h2 className="text-2xl md:text-7xl font-bold text-white text-center mb-2 md:mb-4">
+                <h2 id='contact' className="text-2xl md:text-7xl font-bold text-white text-center mb-2 md:mb-4">
         Contact
       </h2>
       <p className="text-muted-foreground text-center md:text-base mb-6 md:mb-12 text-lg sm:text-xl text-gray-300 ">

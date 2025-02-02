@@ -18,7 +18,7 @@ function Header() {
   >
     {/* icons */}
 
-    <a target="_blank" href="https://drive.google.com/file/d/1q3wYHTx3Mac9t0_cjzqrhAWDg3hyhiG5/view?usp=share_link">
+    <a target="_blank" href="https://flowcv.com/resume/us9nujrp4p">
       <DocumentTextIcon className="w-[33px] h-[33px] text-black cursor-pointer animate-pulse hover:text-blue-600 hover:underline hover:animate-bounce" />
     </a>
 
