@@ -1,159 +1,193 @@
 "use client";
 
-
+import { motion } from "framer-motion"
+import { Pacifico } from "next/font/google"
+import Image from "next/image"
+import { cn } from "../lib/utils"
 import React, { useEffect, useState } from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import { motion } from "framer-motion";
 import { HeroCard } from "./HeroCard";
-import {  ReloadIcon, Share1Icon, TransformIcon } from "@radix-ui/react-icons";
+import { ReloadIcon, Share1Icon, TransformIcon } from "@radix-ui/react-icons";
 import { BookOpenIcon, Square3Stack3DIcon, UserGroupIcon } from "@heroicons/react/24/solid";
 
+import desert from "../app/desert .jpg";
 
+const pacifico = Pacifico({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-pacifico",
+})
 
-
-type Props = {};
-
-function Hero({}: Props) {
-  const [text, count] = useTypewriter({
-    words: [
-      "<Hi, Im Darion George a Full Stack Web Developer!/>",
-      "<Enthusiastic problem-solver with a knack for troubleshooting and debugging complex issues>",
-      "<Hey! Thanks For Checking Out My Portfoilio! />",
-      "<Experienced in database design and management using PostgreSQL and NOSQL style databases>",
-      "<I Love Building Things With Code>",
-      "<Familiar with serverless architecture and deployment using technologies like Vercel and Netlify>",
-      "<You can check out my work below/>",
-      "With great power comes great electricity bill, just trust me bro...",
-      "<Feel free to get in touch/>",
-      "<All your base are belong to us/>",
-      "<.............................../>",
-      "{/*I also write music under the name Deep Voyage*/}",
-      "<Thanks for stopping by!/>",
-      "<Have a great day!/>",
-      "<I'm always learning new things about JavaScript>",
-      "<Next.js is my favorite JavaScript framework>",
-      "<The benefits of using TypeScript are many>",
-      "<Passionate about creating user-friendly and responsive web applications>",
-      "<I love attending tech meetups and events to connect with other JavaScript developers>",
-      "<I have experience using popular JavaScript libraries like jQuery>",
-      "<JavaScript is such a versatile language that can be used for both frontend and backend development>",
-    ],
-    loop: true,
-    delaySpeed: 3500,
-  });
-
-  const [letters, setLetters] = useState<JSX.Element[]>([]);
-
-  useEffect(() => {
-    const text = " QA_Engineer @ ScaleAI ";
-    const letterElements = text.split("").map((letter, index) => (
-      <motion.span
-        key={index}
-        className="inline-block font-light text-xl "
-        style={{ display: "inline-block" }}
-        initial={{ y: 0 }}
-        animate={{
-          y: [0, 2.5, 0], // Define a motion path here, adjust values as needed
-          transition: {
-            duration: 1,
-            repeat: Infinity, // Repeat indefinitely
-            delay: index * 0.1 // Adjust delay as needed
-          }
-          
-        }}
-      >
-        {letter}
-      </motion.span>
-    ));
-    setLetters(letterElements);
-  }, []);
-
+function ElegantShape({
+  className,
+  delay = 0,
+  width = 400,
+  height = 100,
+  rotate = 0,
+  gradient = "from-white/[0.08]",
+}) {
   return (
-    <>
-    
-  <motion.div
-  initial={{ opacity: 0, y: -500 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.75 }}
-  className="flex z-20 my-4 w-[60%] text-[#e3fbf9] flex-col min-h-screen min-w-[400px] items-center justify-center space-y-6 py-12 md:py-24 lg:py-32 rounded-3xl bg-[#000000]"
-  >
-
-  <div className=" flex flex-col  md:flex-row text-start gap-8">
-
-    <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center lg:text-6xl underline text-[#e3fbf9]">Darion George</h1>
-    <p className="pt-4 px-2 bg-[#371693] rounded-3xl inline-block outline"> 
-      {letters}
-    </p>
-  </div>
-
-  <div>
-    <p className="font-bold flex-grow-0 flex px-8 text-base md:text-lg lg:text-xl hover:scale-125 transition-all">
-      {text}
-      <Cursor cursorColor="black" />
-    </p>
-  </div>
-
-  <div className="flex gap-2 justify-evenly flex-row">
-    <motion.div drag dragConstraints={{ top: -0, left: -0, right: 0, bottom: 0 }}>
-      <HeroCard />
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: -150,
+        rotate: rotate - 15,
+      }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        rotate: rotate,
+      }}
+      transition={{
+        duration: 3, // Increased duration
+        delay,
+        ease: "easeInOut", // Changed easing function
+        opacity: { duration: 1.5 }, // Slightly increased opacity transition duration
+      }}
+      className={cn("absolute", className)}
+    >
+      <motion.div
+        animate={{
+          y: [0, 15, 0],
+        }}
+        transition={{
+          duration: 15, // Increased y movement duration
+          repeat: Number.POSITIVE_INFINITY,
+          ease: "easeInOut", // Changed easing function
+        }}
+        style={{
+          width,
+          height,
+        }}
+        className="relative"
+      >
+        <div
+          className={cn(
+            "absolute inset-0 rounded-full",
+            "bg-gradient-to-r to-transparent",
+            gradient,
+            "backdrop-blur-[2px] border-2 border-white/[0.15]",
+            "shadow-[0_8px_32px_0_rgba(255,255,255,0.1)]",
+            "after:absolute after:inset-0 after:rounded-full",
+            "after:bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.2),transparent_70%)]",
+          )}
+        />
+      </motion.div>
     </motion.div>
-    <div className="hidden md:block my-20 bg-[#031111]  relative text-center items-center group/card border-black/[0.1] w-auto sm:w-[30rem] rounded-xl p-6 border  ">
-      <div>
-        <h1 className="text-xl font-bold">The Results</h1>
-        <p className="text-md">How ive been helping people</p>       
-      </div>
-
-      <ul className="flex flex-col h-full justify-evenly">
-        <div className="flex flex-row justify-around items-center ">
-        <p className="text-4xl text-center justify-center font-bold">3+</p>
-        <li className="text-md underline font-light"> Clients & Partners</li> 
-        <UserGroupIcon className="w-8 h-8 text-[#371693]"/>                        
-        </div>
-
-        <div className="flex flex-row justify-around items-center ">
-        <p className="text-4xl text-center justify-center font-bold">22</p>
-        <li className="text-md underline font-light">Projects Completed</li> 
-        <Square3Stack3DIcon className="w-8 h-8 text-[#371693]"/>                 
-        </div>
-
-        <div className="flex flex-row justify-around items-center">
-        <p className="text-4xl text-center justify-center font-bold">5+</p>
-        <li className="text-md underline font-light">Certifications Taken</li>   
-        <BookOpenIcon className="w-8 h-8 text-[#371693]"/>             
-        </div>
-      </ul>
-    </div>
-  </div>  
-
-
-  <div className="bg-[#031111] rounded-lg p-6 mx-14">
-  <h1 className="text-3xl font-bold mb-4">Services</h1>
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-    <div className="bg-white rounded-lg p-4 shadow-md flex flex-col justify-between bg-gradient-to-r from-blue-400 to-purple-500">
-        <Share1Icon className="text-[#a931e0]"/>
-        <h2 className="text-xl font-semibold mb-2">UX/UI Design</h2>
-        <p className="text-[#e3fbf9]">Crafting user experiences that delight and engage.</p>
-    </div>
-    <div className="bg-white rounded-lg p-4 shadow-md flex flex-col justify-between bg-gradient-to-r from-green-400 to-blue-500">
-        <TransformIcon className="text-[#a931e0]"/>
-        <h2 className="text-xl font-semibold mb-2">Application Development</h2>
-        <p className="text-[#e3fbf9]">Building robust and scalable web applications.</p>
-    </div>
-    <div className="bg-white rounded-lg p-4 shadow-md flex flex-col justify-between bg-gradient-to-r from-yellow-400 to-red-500">
-        <ReloadIcon className="text-[#a931e0]"/>
-        <h2 className="text-xl font-semibold mb-2">Hardware Management</h2>
-        <p className="text-[#e3fbf9]">Efficiently managing your hardware infrastructure.</p>        
-      </div>
-    </div>
-  </div>
-
-
-
-
-</motion.div>
-</>
-    
-  );
+  )
 }
 
-export default Hero;
+export default function HeroGeometric({
+  badge = "",
+  title1 = "Darion George",
+  title2 = "Web Developer",
+}) {
+  const fadeUpVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1.2, // Slowed down fade-up transitions
+        delay: 0.5 + i * 0.3,
+        ease: "easeInOut", // Changed easing function
+      },
+    }),
+  }
+
+  return (
+    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#030303]">
+      <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
+
+      <div className="absolute inset-0 overflow-hidden">
+        <ElegantShape
+          delay={0.3}
+          width={600}
+          height={140}
+          rotate={12}
+          gradient="from-indigo-500/[0.15]"
+          className="left-[-10%] md:left-[-5%] top-[15%] md:top-[20%]"
+        />
+
+        <ElegantShape
+          delay={0.5}
+          width={500}
+          height={120}
+          rotate={-15}
+          gradient="from-rose-500/[0.15]"
+          className="right-[-5%] md:right-[0%] top-[70%] md:top-[75%]"
+        />
+
+        <ElegantShape
+          delay={0.4}
+          width={300}
+          height={80}
+          rotate={-8}
+          gradient="from-violet-500/[0.15]"
+          className="left-[5%] md:left-[10%] bottom-[5%] md:bottom-[10%]"
+        />
+
+        <ElegantShape
+          delay={0.6}
+          width={200}
+          height={60}
+          rotate={20}
+          gradient="from-amber-500/[0.15]"
+          className="right-[15%] md:right-[20%] top-[10%] md:top-[15%]"
+        />
+
+        <ElegantShape
+          delay={0.7}
+          width={150}
+          height={40}
+          rotate={-25}
+          gradient="from-cyan-500/[0.15]"
+          className="left-[20%] md:left-[25%] top-[5%] md:top-[10%]"
+        />
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 md:px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <motion.div
+            custom={0}
+            variants={fadeUpVariants}
+            initial="hidden"
+            animate="visible"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-8 md:mb-12"
+          >
+            <Image
+              src={desert}
+              height="150"
+              width="150"
+              className="rounded-full object-cover w-[350px] h-[350px]"
+              alt="thumbnail"
+            />
+          </motion.div>
+
+          <motion.div custom={1} variants={fadeUpVariants} initial="hidden" animate="visible">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 md:mb-8 tracking-tight">
+              <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">{title1}</span>
+              <br />
+              <span
+                className={cn(
+                  "bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-white/90 to-rose-300 ",
+                  pacifico.className,
+                )}
+              >
+                {title2}
+              </span>
+            </h1>
+          </motion.div>
+
+          <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
+            <p className="text-base sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
+              Hi, I'm an Experienced IT professional with a proven track record of success in developing and implementing technology solutions to improve efficiency, security, and the user experience.
+            </p>
+          </motion.div>
+        </div>
+      </div>
+
+      <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303]/80 pointer-events-none" />
+    </div>
+  )
+}

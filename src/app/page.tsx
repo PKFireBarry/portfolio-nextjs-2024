@@ -15,9 +15,9 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-   <BackgroundBeams/>
+
    <div>
-    <main id="home" className=" transition-all scroll-smooth flex min-h-screen flex-col items-center justify-between bg-[#07141b]">
+    <main id="home" className=" transition-all scroll-smooth flex min-h-screen flex-col items-center justify-between bg-black">
       
       <Header/>
       <Nav/>
