@@ -49,16 +49,16 @@ function ElegantShape({
         duration: 1, // Increased duration
         delay,
         ease: "easeInOut", // Changed easing function
-        opacity: { duration: 1.5 }, // Slightly increased opacity transition duration
+        opacity: { duration: .0 }, // Slightly increased opacity transition duration
       }}
       className={cn("absolute", className)}
     >
       <motion.div
         animate={{
-          y: [0, 100, 0],
+          y: [25, 200, 0],
         }}
         transition={{
-          duration: 15, // Increased y movement duration
+          duration: 12, // Increased y movement duration
           repeat: Number.POSITIVE_INFINITY,
           ease: "easeInOut", // Changed easing function
         }}
