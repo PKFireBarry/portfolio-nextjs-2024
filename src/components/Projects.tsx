@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import ProjectCard from './project-card';
+import github from '../app/github.svg'
 
 
 
@@ -9,7 +10,7 @@ const projects = [
   {
     title: "Boorkin Industries",
     description:
-      "",
+      "Clienet needed a website to showcase their services. I built a website using Next.js and Tailwind CSS. The website was designed to be responsive and mobile-friendly, with a clean and modern layout. It also featured a dirt simple contact form. The website was hosted on Vercel and was a great success.",
     tags: [ "Next.js", "Tailwind", "Shadcn UI"],
     link: "https://github.com/PKFireBarry/pet-services",
     image: "https://i.ibb.co/DxQW7rn/Screenshot-From-2025-02-02-17-25-15.png" ,
@@ -19,7 +20,7 @@ const projects = [
     title: "PrompterWave",
     description:
       "PrompterWave began as a solution to achieve better stable diffusion prompts. It bridges the gap between imagination and execution, helping users generate creative and effective prompts.",
-    tags: [ "Next.js", "OpenAI", "Firebase", "Tailwind", "Shadcn UI"],
+    tags: [ "Next.js", "OpenAI", "Firebase", "Tailwind", "Shadcn UI", "SaaS", "Stripe"],
     link: "https://github.com/PKFireBarry/PrompterWave1.1",
     image: "https://i.ibb.co/8zH7RXD/Screenshot-from-2024-01-28-22-36-02.png",
     website: "https://prompter-wave.vercel.app/",

@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Card, CardContent, CardFooter } from './ui/card'
+import github from '../app/github.svg'
 
 interface ProjectCardProps {
   title: string
@@ -40,6 +41,7 @@ export default function ProjectCard({ title, description, image, link, tags, web
       </CardContent>
       <CardFooter className="p-4 pt-0 flex justify-between">
         <Link href={link} target="_blank" className="inline-flex items-center gap-2 text-sm hover:underline">
+          <Image src={github} alt="github" className="w-6 h-6" />
           View on GitHub
         </Link>
         <Link href={website} target="_blank" className="inline-flex items-center gap-2 text-sm hover:underline">
