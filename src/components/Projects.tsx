@@ -8,9 +8,9 @@ import github from '../app/github.svg'
 
 const projects = [
   {
-    title: "Boorkin Industries",
+    title: "Borkin Industries",
     description:
-      "Clienet needed a website to showcase their services. I built a website using Next.js and Tailwind CSS. The website was designed to be responsive and mobile-friendly, with a clean and modern layout. It also featured a dirt simple contact form. The website was hosted on Vercel and was a great success.",
+      "A client needed a website to showcase their services, so I built a responsive and mobile-friendly site using Next.js and Tailwind CSS. The design featured a clean, modern layout with a simple yet effective contact form. Hosted on Vercel, the website delivered a seamless user experience and successfully met the client’s needs.",
     tags: [ "Next.js", "Tailwind", "Shadcn UI"],
     link: "https://github.com/PKFireBarry/pet-services",
     image: "https://i.ibb.co/DxQW7rn/Screenshot-From-2025-02-02-17-25-15.png" ,
@@ -19,7 +19,7 @@ const projects = [
   {
     title: "PrompterWave",
     description:
-      "PrompterWave began as a solution to achieve better stable diffusion prompts. It bridges the gap between imagination and execution, helping users generate creative and effective prompts.",
+      "PrompterWave began as a solution to achieve better Stable Diffusion prompts. It bridges the gap between imagination and execution, helping users generate creative and effective prompts. The platform operates as a subscription-based web app, utilizing Stripe integration for seamless payment processing.",
     tags: [ "Next.js", "OpenAI", "Firebase", "Tailwind", "Shadcn UI", "SaaS", "Stripe"],
     link: "https://github.com/PKFireBarry/PrompterWave1.1",
     image: "https://i.ibb.co/8zH7RXD/Screenshot-from-2024-01-28-22-36-02.png",
@@ -28,7 +28,7 @@ const projects = [
   {
     title: "Blithe Computer Repair",
     description:
-      "The website seamlessly integrates industry-leading technologies, including eslint for code quality, ReactJS for dynamic and interactive user interfaces, NextJS for server-side rendering and enhanced performance.",
+      "The website seamlessly integrates industry-leading technologies, ReactJS for dynamic and interactive user interfaces, NextJS for server-side rendering and enhanced performance.",
     tags: [ "Next.js", "Tailwind", "Framer Motion"],
     link: "https://github.com/PKFireBarry/repair-landing-page",
     image: 'https://i.ibb.co/nRfFFcn/Screenshot-from-2024-01-28-22-36-09.png"',
