@@ -1,64 +1,65 @@
-
 import React from 'react'
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { DocumentTextIcon } from '@heroicons/react/24/solid';
+import { DocumentTextIcon, HomeIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import github from '../app/github.svg'
 import linkedin from '../app/linkedin.svg'
+import Nav from './Nav';
 
 
 function Header() {
   return (
-    <header className="sticky hover:scale-125 min-w-[50%] transition-all top-5 h-[33px] w-[80%] flex items-center justify-between max-w-6xl mx-auto z-30 p-5 bg-ghostwhite rounded-full border-4 bg-white  border-black">
-  <div
+    <header className="sticky top-0 z-30 w-full bg-white border-b border-black">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 sm:justify-between">
+        <div className="flex flex-row items-center">
+          {/* Back to Top Link */}
+          <Link href="#home">
+            <HomeIcon className="h-8 w-8 cursor-pointer text-black hover:text-blue-600" />
+          </Link>
 
-    className="flex flex-row items-center "
-  >
-    {/* icons */}
+          <a target="_blank" href="https://flowcv.com/resume/us9nujrp4p">
+            <DocumentTextIcon className="mx-4 h-8 w-8 cursor-pointer text-black hover:text-blue-600" />
+          </a>
+          <a target="_blank" href='https://www.linkedin.com/in/darion-george/'>
+            <Image
+              height={33}
+              width={33}
+              className="mx-4 h-8 w-8"
+              alt=""
+              src={linkedin}
+            />
+          </a>
+          <a target="_blank" href='https://github.com/PKFireBarry'>
+            <Image
+              height={33}
+              width={33}
+              className="h-8 w-8"
+              alt=""
+              src={github}
+            />
+          </a>
+        </div>
 
-    <a target="_blank" href="https://flowcv.com/resume/us9nujrp4p">
-      <DocumentTextIcon className="w-[33px] h-[33px] text-black cursor-pointer animate-pulse hover:text-blue-600 hover:underline hover:animate-bounce" />
-    </a>
-
-    <a target="_blank" href='https://www.linkedin.com/in/darion-george/'>
-      <Image
-          height={33}
-          width={33}
-          className=" w-[33px] h-[33px] mx-4"
-          alt=""
-          src={linkedin}
-        />      
-    </a>
-
-    <a target="_blank" href='https://github.com/PKFireBarry'>
-      <Image
-          height={33}
-          width={33}
-          className=" w-[33px] h-[33px]"
-          alt=""
-          src={github}
-        />      
-    </a>
-
-  </div>
-  <Link href="#contact">
-    <div
-      className="flex flex-row items-center text-gray-500 cursor-pointer"
-    >
-      <SocialIcon
-        className="cursor-pointer"
-        network="email"
-        fgColor="black"
-        bgColor="transparent"
-      />
-      <p className="uppercase hidden md:inline-flex text-sm text-black">
-        Wanna Contact Me?
-      </p>
-    </div>
-  </Link>
-</header>
+        <div className="flex items-center space-x-4">
+          <Link href="#contact">
+            <div className="flex cursor-pointer items-center text-gray-500">
+              <SocialIcon
+                className="cursor-pointer"
+                network="email"
+                style={{ height: 40, width: 40 }}
+                fgColor="black"
+                bgColor="transparent"
+              />
+              <p className="hidden text-sm uppercase text-black md:inline-flex">
+                Wanna Contact Me?
+              </p>
+            </div>
+          </Link>
+        </div>
+      </div>
+    </header>
   )
 }
 

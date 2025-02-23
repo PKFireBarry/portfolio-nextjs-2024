@@ -1,7 +1,10 @@
-import React from 'react'
-import Image from 'next/image'
+"use client"
+
+import React, { useState } from 'react'
 import ProjectCard from './project-card';
-import github from '../app/github.svg'
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useSwipeable } from 'react-swipeable';
+import { motion, AnimatePresence } from 'framer-motion';
 
 
 
@@ -10,7 +13,7 @@ const projects = [
   {
     title: "Borkin Industries",
     description:
-      "A client needed a website to showcase their services, so I built a responsive and mobile-friendly site using Next.js and Tailwind CSS. The design featured a clean, modern layout with a simple yet effective contact form. Hosted on Vercel, the website delivered a seamless user experience and successfully met the client’s needs.",
+      "A client needed a website to showcase their services, so I built a responsive and mobile-friendly site using Next.js and Tailwind CSS. The design featured a clean, modern layout with a simple yet effective contact form. Hosted on Vercel, the website delivered a seamless user experience and successfully met the client's needs.",
     tags: [ "Next.js", "Tailwind", "Shadcn UI"],
     link: "https://github.com/PKFireBarry/pet-services",
     image: "https://i.ibb.co/DxQW7rn/Screenshot-From-2025-02-02-17-25-15.png" ,
@@ -31,7 +34,7 @@ const projects = [
       "The website seamlessly integrates industry-leading technologies, ReactJS for dynamic and interactive user interfaces, NextJS for server-side rendering and enhanced performance.",
     tags: [ "Next.js", "Tailwind", "Framer Motion"],
     link: "https://github.com/PKFireBarry/repair-landing-page",
-    image: 'https://i.ibb.co/nRfFFcn/Screenshot-from-2024-01-28-22-36-09.png"',
+    image: 'https://i.ibb.co/nRfFFcn/Screenshot-from-2024-01-28-22-36-09.png',
     website: "https://repair-landing-page.vercel.app/",
   },
   {
@@ -64,27 +67,110 @@ const projects = [
 ]
 
 export default function Projects() {
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+  const [direction, setDirection] = useState(0); // Add direction state
+
+  const goToPreviousProject = () => {
+    setDirection(-1); // Set direction to -1 for left/previous
+    setCurrentProjectIndex((prevIndex) =>
+      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNextProject = () => {
+    setDirection(1); // Set direction to 1 for right/next
+    setCurrentProjectIndex((prevIndex) =>
+      prevIndex === projects.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  // Set up swipe handlers
+  const handlers = useSwipeable({
+    onSwipedLeft: () => goToNextProject(),
+    onSwipedRight: () => goToPreviousProject(),
+    preventScrollOnSwipe: true, // Prevent scrolling while swiping
+    trackMouse: false, // Disable mouse tracking (optional, for touch-only)
+  });
+
   return (
     <>
     
-    <div className="relative min-h-screen w-full pt-24  overflow-hidden bg-[#030303]">
+    <div className="relative h-full min-w-full md:min-w-[50%] min-h-[695px] pt-24  overflow-hidden bg-[#030303]">
       <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-7xl  text-center text-white">Some Projects</h2>
       <p className=" flex justify-center text-muted-foreground mt-4 mb-12 text-lg sm:text-xl text-gray-300">
         Some drafts of projects I worked on.
       </p>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 mx-12">
-        {projects.map((project, index) => (
-          <ProjectCard
-            key={index}
-            title={project.title}
-            description={project.description}
-            image={project.image}
-            link={project.link}
-            tags={project.tags}
-            website={project.website}
-          />
-        ))}
+
+      {/* Halo Effect Container */}
+      <div className="absolute inset-x-0 -top-40 flex justify-center">
+        <motion.div
+          className="w-full max-w-[800px] h-40 bg-gradient-to-b from-purple-500/50 to-transparent rounded-full blur-3xl"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1, transition: { duration: 1, delay: 0.2 } }}
+        />
       </div>
+
+      <div className="flex items-center justify-center">
+        <button
+          onClick={goToPreviousProject}
+          className="p-2 rounded-full hover:bg-gray-700 transition"
+          aria-label="Previous Project"
+        >
+          <ChevronLeft size={24} color="white" />
+        </button>
+
+        <div className="mx-4 w-full " {...handlers}>
+          <AnimatePresence initial={false} custom={direction} mode="wait">
+            <motion.div
+              key={currentProjectIndex}
+              custom={direction}
+              className='w-full'
+              variants={{
+                enter: (direction: number) => ({
+                  x: direction > 0 ? '100%' : '-100%',
+                  opacity: 1,
+                }),
+                center: {
+                  zIndex: 1,
+                  x: 0,
+                  opacity: 1,
+                },
+                exit: (direction: number) => ({
+                  zIndex: 0,
+                  x: direction < 0 ? '100%' : '-100%',
+                  opacity: 1,
+                  display: "none",
+                }),
+              }}
+              transition={{
+                x: { type: "spring", stiffness: 250, damping: 25 },
+                display: { delay: 0.3 },
+              }}
+              animate="center"
+              initial="enter"
+              exit="exit"
+            >
+              <ProjectCard
+                title={projects[currentProjectIndex].title}
+                description={projects[currentProjectIndex].description}
+                image={projects[currentProjectIndex].image}
+                link={projects[currentProjectIndex].link}
+                tags={projects[currentProjectIndex].tags}
+                website={projects[currentProjectIndex].website}
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        <button
+          onClick={goToNextProject}
+          className="p-2 rounded-full hover:bg-gray-700 transition"
+          aria-label="Next Project"
+        >
+          <ChevronRight size={24} color="white" />
+        </button>
+      </div>
+
       <div className='flex justify-center items-center mt-12'>
       
       </div>

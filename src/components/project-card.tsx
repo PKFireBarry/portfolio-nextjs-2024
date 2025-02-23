@@ -24,11 +24,11 @@ export default function ProjectCard({ title, description, image, link, tags, web
         />
       </div>
       <CardContent className="p-4 flex-grow">
-        <h3 className="font-semibold text-xl mb-2">{title}</h3>
-        <p className="text-sm text-black text-muted-foreground mb-4 overflow-hidden" style={{ display: '-webkit-box', WebkitLineClamp: '3', WebkitBoxOrient: 'vertical' }}>
+        <h3 className="font-semibold text-2xl mb-2 line-clamp-1">{title}</h3>
+        <p className="text-sm text-black text-muted-foreground mt-0 overflow-hidden" style={{ display: '-webkit-box', WebkitLineClamp: '3', WebkitBoxOrient: 'vertical' }}>
           {description}
         </p>
-        <div className="flex flex-wrap gap-2">
+        <div className="mt-4 flex flex-wrap gap-2 items-center">
           {tags.map((tag) => (
             <span
               key={tag}

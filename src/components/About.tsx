@@ -26,7 +26,7 @@ function About() {
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-7xl mb-4 mt-12  text-center text-white">
             About Me
           </h1>
-          <p className="text-lg sm:text-xl text-gray-300"> Developer | Hardware Enthusiast | Automation Expert</p>
+          <p className="text-lg sm:text-xl text-gray-300"> Developer | Hardware Enthusiast | AI/Automation Expert</p>
         </header>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -83,7 +83,7 @@ function About() {
             ))}
           </div>
           <motion.a
-            href="https://drive.google.com/file/d/1q3wYHTx3Mac9t0_cjzqrhAWDg3hyhiG5/view?usp=share_link"
+            href="https://flowcv.com/resume/us9nujrp4p"
             className="text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 rounded-full hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg"
             target="_blank"
             rel="noopener noreferrer"

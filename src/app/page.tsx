@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
 import Projects from "@/components/Projects";
 import TechStack from "@/components/tech-stack";
+import Services from "@/components/Services";
 
 export default function Home() {
   return (
@@ -17,8 +18,10 @@ export default function Home() {
       <Hero/>
 
       <About/>
+      <Services />
       <Projects/>
-      <TechStack/> 
+      <TechStack/>
+ 
       <Contact/>
     </main>
     </div>
