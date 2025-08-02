@@ -1,0 +1,114 @@
+[
+  {
+    "title": "zkkeynest",
+    "description": "Zero-knowledge API key management platform designed for developers, offering secure credential storage with client-side encryption and one-time sharing capabilities.",
+    "tags": ["Next.js", "React", "Clerk Auth", "AES-256-GCM", "Google Cloud", "Tailwind CSS", "OAuth 2.0", "SaaS"],
+    "link": "https://github.com/PKFireBarry/zkkeynest",
+    "image": "https://i.ibb.co/B9vZ5sF/Screenshot-2025-07-18-at-13-18-46.png",
+    "website": "https://zkkeynest.space/",
+    "features": [
+      "Zero-knowledge encryption ensuring no access to user's actual encryption keys with AES-256-GCM encryption standard",
+      "Secure API key storage and management with rotation reminders and copy-safe key views for enhanced security workflows",
+      "One-time sharing with expiring links enabling safe credential distribution without exposing keys in chat logs or emails",
+      "Multi-tier pricing model from free (10 keys) to enterprise, with social login via Google/GitHub and team collaboration features"
+    ]
+  },
+  {
+    "title": "Job Tracker Tools",
+    "description": "Comprehensive job search platform that aggregates listings from multiple job boards with AI-powered career tools and LinkedIn automation.",
+    "tags": ["React 19", "Next.js 15", "TypeScript", "Google Gemini API", "TailwindCSS", "Google Sheets API", "BrowserUse", "Framer Motion", "Job APIs"],
+    "link": "https://github.com/PKFireBarry/googlesheets",
+    "image": "https://i.ibb.co/Rpd3BJ5Y/Screenshot-2025-08-02-at-03-17-14.png",
+    "website": "https://googlesheets-eight.vercel.app/",
+    "features": [
+      "Multi-source job aggregation with daily updates and advanced filtering by title, skills, location, experience, salary, and source",
+      "Application tracking system with dedicated status monitoring and follow-up management for centralized job search organization",
+      "AI-powered resume tailoring that customizes resumes for specific applications and generates personalized cover letters",
+      "LinkedIn Contact Finder using browser automation to identify HR contacts and hiring managers for effective networking"
+    ]
+  },
+  {
+    "title": "Boorkin Industries",
+    "description": "Multi-role service marketplace connecting pet care clients with accredited veterinary technicians, featuring sophisticated booking management and integrated payment processing.",
+    "tags": ["Next.js 15", "TypeScript", "React 19", "Firebase/Firestore", "Stripe API", "Clerk Auth", "Tailwind CSS", "Shadcn UI"],
+    "link": "https://github.com/PKFireBarry/boorkin",
+    "image": "https://i.ibb.co/fzrs3GZJ/Screenshot-2025-08-02-at-03-22-04.png",
+    "website": "https://borkinindustries.com/",
+    "features": [
+      "Role-based authentication with dynamic user dashboards and complete contractor application/approval workflow for Southeast Florida's luxury pet care market",
+      "Advanced booking system with multi-service selection, date range scheduling, real-time availability calendars, and integrated Stripe payment processing including escrow functionality",
+      "Internal communication system with contextual messaging tied to active bookings, comprehensive email notifications, and real-time chat with unread message tracking",
+      "Administrative dashboard with contractor management, booking oversight, metrics visualization, payment tracking, and platform analytics with financial reporting"
+    ]
+  },
+  {
+    "title": "PrompterWave",
+    "description": "Subscription-based SaaS platform optimizing Stable Diffusion prompts with AI-powered keyword enhancement and Firebase database integration.",
+    "tags": ["Next.js", "TypeScript", "OpenAI API", "Firebase", "Tailwind CSS", "Shadcn UI", "Stripe", "SaaS"],
+    "link": "https://github.com/PKFireBarry/PrompterWave1.1",
+    "image": "https://i.ibb.co/8zH7RXD/Screenshot-from-2024-01-28-22-36-02.png",
+    "website": "https://prompter-wave.vercel.app/",
+    "features": [
+      "AI-powered keyword optimization for enhanced Stable Diffusion image generation with intelligent prompt refinement",
+      "Subscription-based SaaS model with integrated Stripe payment processing for seamless recurring billing management",
+      "Firebase database integration for efficient storage and retrieval of prompts and user-generated responses",
+      "Dedicated brainstorming workspace helping users balance creativity and technical promptability in text-to-image workflows"
+    ]
+  },
+  {
+    "title": "Blithe Computer Repair",
+    "description": "Professional computer repair service landing page featuring modern design principles and smooth animations for enhanced user experience.",
+    "tags": ["Next.js", "React", "Tailwind CSS", "Framer Motion", "ESLint"],
+    "link": "https://github.com/PKFireBarry/repair-landing-page",
+    "image": "https://i.ibb.co/nRfFFcn/Screenshot-from-2024-01-28-22-36-09.png",
+    "website": "https://repair-landing-page.vercel.app/",
+    "features": [
+      "Dynamic and interactive user interfaces built with ReactJS for engaging customer interactions",
+      "Server-side rendering with Next.js for enhanced performance and improved SEO optimization",
+      "Streamlined and customizable styling system using Tailwind CSS for consistent design language",
+      "Smooth and captivating animations powered by Framer Motion to enhance user engagement and experience"
+    ]
+  },
+  {
+    "title": "AI Cover Letter Writer",
+    "description": "Intelligent cover letter generation platform using OpenAI's API to create personalized cover letters based on job requirements and user information.",
+    "tags": ["Next.js", "React", "OpenAI API", "Firebase", "Tailwind CSS", "Framer Motion", "Particles", "Universal Cookie"],
+    "link": "https://github.com/PKFireBarry/AI-Cover-Letter-Writer",
+    "image": "https://i.ibb.co/mcfHytm/Screenshot-from-2023-04-10-02-00-14.png",
+    "website": "https://ai-cover-letter-writer.vercel.app/",
+    "features": [
+      "AI-powered cover letter generation using OpenAI's API to create personalized content based on job requirements and user profile data",
+      "Secure user account system with Firebase authentication for convenient storage and management of personal information and cover letter history",
+      "Precise generation controls ensuring tailored and unique cover letters for each specific job application",
+      "Fully responsive design optimized for mobile and desktop with letter history database storing all generation parameters for easy reference"
+    ]
+  },
+  {
+    "title": "Swakabilly Chat",
+    "description": "Real-time chat application with Firebase authentication and database management, featuring secure messaging and room-based communication.",
+    "tags": ["React", "Tailwind CSS", "Framer Motion", "Firebase", "Toastify"],
+    "link": "https://github.com/PKFireBarry/swakabilly-chat",
+    "image": "https://i.ibb.co/zXXXMWF/Screenshot-from-2023-03-09-09-21-16.png",
+    "website": "https://swakabilly-chat.vercel.app/",
+    "features": [
+      "Real-time messaging system using Firebase for instant message delivery and synchronization across all connected users",
+      "Secure user authentication and authorization system managing user access and permissions for chat participation",
+      "Dynamic chat room creation and joining functionality allowing users to organize conversations by topics or groups",
+      "Message management system enabling users to edit or delete their own messages with secure access controls"
+    ]
+  },
+  {
+    "title": "A Really Cool Blog",
+    "description": "Modern blog application built with Next.js 13 featuring Sanity.io CMS integration, dynamic page routing, and seamless content management capabilities.",
+    "tags": ["Next.js 13", "TypeScript", "Tailwind CSS", "Sanity V3", "GROQ"],
+    "link": "https://github.com/PKFireBarry/nextjs-blog",
+    "image": "https://i.ibb.co/2hvRDGV/Screen-Shot-2023-02-07-at-5-48-34-AM.png",
+    "website": "https://a-really-cool-blog.vercel.app/",
+    "features": [
+      "Responsive and visually appealing design using Next.js 13 and Tailwind CSS ensuring seamless user experience across all devices",
+      "Sanity.io CMS integration with powerful content management system enabling efficient content creation and dynamic page routing",
+      "GROQ query language implementation for efficient data retrieval and Next.js 13 optimizations for enhanced performance",
+      "User-friendly Preview/Admin mode with Google authentication allowing content creators to add blog posts from any device"
+    ]
+  }
+]

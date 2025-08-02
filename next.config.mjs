@@ -1,7 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-      domains: ['i.ibb.co','images.unspalsh.com'],
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'i.ibb.co',
+        },
+        {
+          protocol: 'https',
+          hostname: 'images.unsplash.com',
+        },
+        {
+          protocol: 'https',
+          hostname: 'cdn.worldvectorlogo.com',
+        },
+      ],
     },
   };
   

@@ -1,100 +1,136 @@
 "use client"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { TextGenerateEffect } from "./text-generate-effect"
-import { CheckCircledIcon } from "@radix-ui/react-icons"
+import { Github, Linkedin, MapPin, Download } from "lucide-react"
 import rock from "../app/rock.jpg"
-import linkedin from "../app/linkedin.svg"
-import github from "../app/github.svg"
-
-const words = `Hi, I'm Darion George, a software developer specializing in creating websites for small to medium-sized businesses, helping them establish a strong online presence. I have expertise in setting up and deploying scalable internet infrastructure solutions. I'm proficient in TypeScript, Python, SQL, and automation tools like n8n. Additionally, I have experience with backend data management, web scraping, manual testing, and other data-driven workflows to streamline processes. In my free time, I enjoy hiking and spending time with my famliy.`
 
 function About() {
   return (
-    <main
-      id="about"
-      className="relative  w-full  to-pink-800 px-8 sm:p-8 overflow-hidden bg-[#030303]"
-    >
-      <div className="absolute inset-0 bg-[url('/noise.png')] opacity-20 mix-blend-overlay"></div>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="relative z-10 max-w-6xl mx-auto"
-      >
-        <header className="text-center mb-12">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-7xl mb-4 mt-12  text-center text-white">
-            About Me
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-300"> Developer | Hardware Enthusiast | AI/Automation Expert</p>
-        </header>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <section className="py-24 px-6 bg-black">
+      <div className="max-w-4xl mx-auto">
         <motion.div
-  whileHover={{ scale: 1.05 }}
-  className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl"
->
-  <Image
-    src={(rock as unknown as string) || "/placeholder.svg"}
-    alt="Profile"
-    layout="fill"
-    objectFit="cover"
-    className="transition-transform duration-300 hover:scale-110"
-  />
-  <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 p-6 flex flex-col">
-    <h2 className="text-xl sm:text-2xl font-bold text-white">Colorado Springs, Colorado</h2>
-    <span></span>
-    <p></p>
-    <p className="text-white">6,237-ft</p>
-  </div>
-</motion.div>
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-6xl font-light text-white mb-4 tracking-tight">
+            About
+          </h2>
+        </motion.div>
 
-          <motion.div whileHover={{ scale: 1.02 }} className="bg-white/10 text-black backdrop-blur-lg rounded-2xl p-6 shadow-2xl">
-            <div className="flex items-center mb-4">
-              <CheckCircledIcon className="w-6 h-6 text-green-400" />
-              <p className="ml-2 text-lg font-bold text-white">Open To Work</p>
+        <div className="grid lg:grid-cols-[300px,1fr] gap-12 items-start">
+          {/* Profile Image */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="mx-auto lg:mx-0"
+          >
+            <div className="relative w-72 h-72 lg:w-full lg:h-80 rounded-lg overflow-hidden">
+              <Image
+                src={rock || "/placeholder.svg"}
+                alt="Darion George"
+                fill
+                className="object-cover"
+                onError={(e) => {
+                  if (e.currentTarget instanceof HTMLImageElement) {
+                    e.currentTarget.src = '/placeholder.svg';
+                    e.currentTarget.onerror = null;
+                  }
+                }}
+              />
             </div>
-            <TextGenerateEffect words={words} className="text-black" />
-          </motion.div>
-        </div>
+            
+            <div className="mt-6 space-y-4">
+              <div className="flex items-center gap-2 text-gray-400">
+                <MapPin size={16} />
+                <span className="text-sm">Central Florida</span>
+              </div>
+              
+              <div className="flex items-center gap-4">
+                <a
+                  href="https://www.linkedin.com/in/darion-george/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 bg-zinc-900 rounded-lg hover:bg-zinc-800 transition-colors"
+                >
+                  <Linkedin size={20} className="text-gray-300" />
+                </a>
+                <a
+                  href="https://github.com/PKFireBarry"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 bg-zinc-900 rounded-lg hover:bg-zinc-800 transition-colors"
+                >
+                  <Github size={20} className="text-gray-300" />
+                </a>
+              </div>
 
-        <footer className="mt-12 flex flex-col items-center space-y-6">
-          <div className="flex gap-8">
-            {[
-              { href: "https://www.linkedin.com/in/darion-george/", src: linkedin, alt: "LinkedIn" },
-              { href: "https://github.com/PKFireBarry", src: github, alt: "GitHub" },
-            ].map((social) => (
-              <motion.a
-                key={social.alt}
-                href={social.href}
+              <a
+                href="https://flowcv.com/resume/us9nujrp4p"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                whileTap={{ scale: 0.9 }}
+                className="inline-flex items-center gap-2 bg-white text-black px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium"
               >
-                <Image
-                  width={40}
-                  height={40}
-                  src={social.src || "/placeholder.svg"}
-                  alt={social.alt}
-                  className="filter "
-                />
-              </motion.a>
-            ))}
-          </div>
-          <motion.a
-            href="https://flowcv.com/resume/us9nujrp4p"
-            className="text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 rounded-full hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+                <Download size={16} />
+                Resume
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="space-y-6"
           >
-            Download CV
-          </motion.a>
-        </footer>
-      </motion.div>
-    </main>
+            <div>
+              <h3 className="text-2xl font-medium text-white mb-4">
+                Hi, I'm Darion George
+              </h3>
+              <div className="space-y-4 text-gray-400 leading-relaxed">
+                <p>
+                  A software developer specializing in full-stack web applications and data-driven solutions. 
+                  I've built sophisticated marketplaces, AI-powered platforms, and automation systems for clients 
+                  ranging from startups to enterprise companies like OpenAI, Nvidia, and General Motors.
+                </p>
+                <p>
+                  With experience at Scale AI training large-scale AI models and Apple providing security expertise, 
+                  I bring both technical depth and real-world problem-solving skills. I've successfully built and 
+                  operated a $100K+ computer hardware business while developing data pipelines that processed 
+                  11,000+ business leads for B2B clients.
+                </p>
+                <p>
+                  I work primarily with TypeScript and Python on the backend, building React and Next.js applications 
+                  on the frontend. This combination lets me create complete solutions from database design to user 
+                  interface, with AI integrations and automation workflows that actually solve business problems.
+                </p>
+                <p>
+                  When I'm not coding, I enjoy traveling to places like Colorado, California and the greater D.C. area for hiking and spending time 
+                  with my family here in Florida.
+                </p>
+              </div>
+            </div>
+
+            <div className="border-l-2 border-zinc-800 pl-6">
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                <span className="text-green-400 text-sm font-medium">Available for work</span>
+              </div>
+              <p className="text-gray-400 text-sm">
+                Open to new opportunities and collaborations
+              </p>
+            </div>
+
+          </motion.div>
+        </div>
+      </div>
+    </section>
   )
 }
 

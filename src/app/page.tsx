@@ -6,6 +6,7 @@ import Nav from "@/components/Nav";
 import Projects from "@/components/Projects";
 import TechStack from "@/components/tech-stack";
 import Services from "@/components/Services";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
       <Hero/>
 
       <About/>
-      <Services />
+      <Experience/>
       <Projects/>
       <TechStack/>
  
