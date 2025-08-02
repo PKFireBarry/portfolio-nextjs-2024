@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { Inter } from "next/font/google"
 import Image from "next/image"
 import { cn } from "../lib/utils"
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import desert from "../app/desert .jpg";
 
 const subheading = "Let's Transform Ideas into Powerful Experiences With Tailored Digital Solutions."
@@ -270,7 +270,7 @@ function TerminalStatus({ onStateChange }: { onStateChange: (state: number) => v
     }
   }, [])
   
-  const states = [
+  const states = useMemo(() => [
     { text: "AUTHENTICATING USER", duration: 20000 },     // 20s
     { text: "SYSTEM READY", duration: 15000 },            // 15s
     { text: userInfo || "DETECTING SYSTEM...", duration: 45000 }, // 45s - show user info
@@ -281,7 +281,7 @@ function TerminalStatus({ onStateChange }: { onStateChange: (state: number) => v
     { text: "SIGNAL FOUND", duration: 8000 },             // 8s
     { text: "REAUTHENTICATING USER", duration: 6000 },    // 6s
     { text: "SYSTEM ONLINE", duration: 17000 }            // 17s
-  ]  // Total: ~180 seconds = 3 minutes
+  ], [userInfo])  // Total: ~180 seconds = 3 minutes
 
   useEffect(() => {
     onStateChange(currentState)
@@ -313,7 +313,7 @@ function TerminalStatus({ onStateChange }: { onStateChange: (state: number) => v
       clearInterval(typeInterval)
       clearTimeout(stateTimer)
     }
-  }, [currentState])
+  }, [currentState, states])
 
   const currentStateData = states[currentState]
 
@@ -378,7 +378,7 @@ export default function HeroGeometric({
       transition: {
         duration: 1.5,
         delay: 0.5 + i * 0.3,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       },
     }),
   }

@@ -91,17 +91,17 @@ function About() {
           >
             <div>
               <h3 className="text-2xl font-medium text-white mb-4">
-                Hi, I'm Darion George
+                Hi, I&apos;m Darion George
               </h3>
               <div className="space-y-4 text-gray-400 leading-relaxed">
                 <p>
                   A software developer specializing in full-stack web applications and data-driven solutions. 
-                  I've built sophisticated marketplaces, AI-powered platforms, and automation systems for clients 
+                  I&apos;ve built sophisticated marketplaces, AI-powered platforms, and automation systems for clients 
                   ranging from startups to enterprise companies like OpenAI, Nvidia, and General Motors.
                 </p>
                 <p>
                   With experience at Scale AI training large-scale AI models and Apple providing security expertise, 
-                  I bring both technical depth and real-world problem-solving skills. I've successfully built and 
+                  I bring both technical depth and real-world problem-solving skills. I&apos;ve successfully built and 
                   operated a $100K+ computer hardware business while developing data pipelines that processed 
                   11,000+ business leads for B2B clients.
                 </p>
@@ -111,7 +111,7 @@ function About() {
                   interface, with AI integrations and automation workflows that actually solve business problems.
                 </p>
                 <p>
-                  When I'm not coding, I enjoy traveling to places like Colorado, California and the greater D.C. area for hiking and spending time 
+                  When I&apos;m not coding, I enjoy traveling to places like Colorado, California and the greater D.C. area for hiking and spending time 
                   with my family here in Florida.
                 </p>
               </div>

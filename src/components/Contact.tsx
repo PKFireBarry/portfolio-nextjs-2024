@@ -73,7 +73,7 @@ function Contact() {
             Get In Touch
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Let's work together on your next project. I'll get back to you within 24 hours.
+            Let&apos;s work together on your next project. I&apos;ll get back to you within 24 hours.
           </p>
         </motion.div>
 
@@ -87,11 +87,11 @@ function Contact() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-medium text-white mb-4">Let's connect</h3>
+              <h3 className="text-2xl font-medium text-white mb-4">Let&apos;s connect</h3>
               <p className="text-gray-400 leading-relaxed">
-                I'm always interested in new opportunities and collaborations. 
+                I&apos;m always interested in new opportunities and collaborations. 
                 Whether you have a project in mind or just want to chat about tech, 
-                I'd love to hear from you.
+                I&apos;d love to hear from you.
               </p>
             </div>
 
@@ -182,7 +182,7 @@ function Contact() {
                   onChange={handleInputChange}
                   required
                   className="bg-zinc-800/50 border-zinc-700/50 text-white placeholder:text-gray-400 focus:border-zinc-600"
-                  placeholder="What's this about?"
+                  placeholder="What&apos;s this about?"
                 />
               </div>
 
@@ -204,7 +204,7 @@ function Contact() {
               {submitStatus === 'success' && (
                 <div className="flex items-center gap-2 text-green-400 text-sm">
                   <CheckCircle size={16} />
-                  Message sent successfully! I'll get back to you soon.
+                  Message sent successfully! I&apos;ll get back to you soon.
                 </div>
               )}
 
