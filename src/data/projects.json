@@ -18,7 +18,7 @@
     "description": "AI-powered sales intelligence platform that transforms company URLs into comprehensive sales briefs in under 3 minutes, automating prospect research for B2B sales teams.",
     "tags": ["Next.js 15", "TypeScript", "React 18", "Firebase/Firestore", "Google Gemini AI", "Clerk Auth", "Tailwind CSS", "Radix UI", "Puppeteer", "Vitest"],
     "link": "",
-    "image": "",
+    "image": "https://i.ibb.co/wj4VCp6/image.png",
     "website": "",
     "features": [
       "AI-Powered Sales Intelligence Platform transforming company URLs into comprehensive sales briefs in under 3 minutes through advanced AI analysis and web scraping technology",
