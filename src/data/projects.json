@@ -3,9 +3,9 @@
     "title": "Founder Flow",
     "description": "AI-powered networking platform connecting developers with early-stage startup founders, featuring automated outreach tools and verified contact databases with sophisticated CRM management.",
     "tags": ["Next.js 15", "TypeScript", "React 19", "Firebase/Firestore", "Stripe API", "Clerk Auth", "Tailwind CSS", "Shadcn UI", "Google Gemini", "Google Search"],
-    "link": "https://github.com/PKFireBarry/founder-flow",
+    "link": "",
     "image": "",
-    "website": "",
+    "website": "https://founderflow.space/",
     "features": [
       "Founder Discovery Platform with AI-powered networking connecting developers to early-stage startup founders through automated outreach tools and verified contact databases",
       "Professional Relationship Management System featuring sophisticated CRM with Kanban-style workflow tracking communication across email, LinkedIn, and direct applications",
