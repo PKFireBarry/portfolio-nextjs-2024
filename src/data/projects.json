@@ -1,5 +1,33 @@
 [
   {
+    "title": "Founder Flow",
+    "description": "AI-powered networking platform connecting developers with early-stage startup founders, featuring automated outreach tools and verified contact databases with sophisticated CRM management.",
+    "tags": ["Next.js 15", "TypeScript", "React 19", "Firebase/Firestore", "Stripe API", "Clerk Auth", "Tailwind CSS", "Shadcn UI", "Google Gemini", "Google Search"],
+    "link": "https://github.com/PKFireBarry/founder-flow",
+    "image": "",
+    "website": "",
+    "features": [
+      "Founder Discovery Platform with AI-powered networking connecting developers to early-stage startup founders through automated outreach tools and verified contact databases",
+      "Professional Relationship Management System featuring sophisticated CRM with Kanban-style workflow tracking communication across email, LinkedIn, and direct applications",
+      "Freemium SaaS Architecture with $3/month Pro tier serving tech professionals seeking opportunities in cutting-edge startups before mainstream adoption",
+      "Multi-channel communication tracking enabling users to manage founder relationships from initial contact through ongoing partnerships"
+    ]
+  },
+  {
+    "title": "BriefSwiftly",
+    "description": "AI-powered sales intelligence platform that transforms company URLs into comprehensive sales briefs in under 3 minutes, automating prospect research for B2B sales teams.",
+    "tags": ["Next.js 15", "TypeScript", "React 18", "Firebase/Firestore", "Google Gemini AI", "Clerk Auth", "Tailwind CSS", "Radix UI", "Puppeteer", "Vitest"],
+    "link": "",
+    "image": "",
+    "website": "",
+    "features": [
+      "AI-Powered Sales Intelligence Platform transforming company URLs into comprehensive sales briefs in under 3 minutes through advanced AI analysis and web scraping technology",
+      "Full-Stack Implementation with modern tech stack including real-time progress tracking, responsive design, and scalable Firebase Firestore data storage",
+      "Comprehensive Sales Intelligence Features including decision maker identification, pain point analysis, personalized talking points, and objection handling strategies",
+      "Export and Collaboration Tools with PDF/HTML export capabilities, team sharing features, industry-specific templates, and customizable brief sections for actionable insights"
+    ]
+  },
+  {
     "title": "zkkeynest",
     "description": "Zero-knowledge API key management platform designed for developers, offering secure credential storage with client-side encryption and one-time sharing capabilities.",
     "tags": ["Next.js", "React", "Clerk Auth", "AES-256-GCM", "Google Cloud", "Tailwind CSS", "OAuth 2.0", "SaaS"],
