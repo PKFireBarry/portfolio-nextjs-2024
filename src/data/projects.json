@@ -19,7 +19,7 @@
     "tags": ["Next.js 15", "TypeScript", "React 18", "Firebase/Firestore", "Google Gemini AI", "Clerk Auth", "Tailwind CSS", "Radix UI", "Puppeteer", "Vitest"],
     "link": "",
     "image": "https://i.ibb.co/wj4VCp6/image.png",
-    "website": "",
+    "website": "https://brief-swiftly.vercel.app/",
     "features": [
       "AI-Powered Sales Intelligence Platform transforming company URLs into comprehensive sales briefs in under 3 minutes through advanced AI analysis and web scraping technology",
       "Full-Stack Implementation with modern tech stack including real-time progress tracking, responsive design, and scalable Firebase Firestore data storage",
