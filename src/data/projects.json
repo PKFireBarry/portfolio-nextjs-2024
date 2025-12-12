@@ -17,7 +17,7 @@
     "title": "BriefSwiftly",
     "description": "AI-powered sales intelligence platform that transforms company URLs into comprehensive sales briefs in under 3 minutes, automating prospect research for B2B sales teams.",
     "tags": ["Next.js 15", "TypeScript", "React 18", "Firebase/Firestore", "Google Gemini AI", "Clerk Auth", "Tailwind CSS", "Radix UI", "Puppeteer", "Vitest"],
-    "link": "",
+    "link": "https://github.com/PKFireBarry/BriefSwiftly",
     "image": "https://i.ibb.co/wj4VCp6/image.png",
     "website": "https://brief-swiftly.vercel.app/",
     "features": [
