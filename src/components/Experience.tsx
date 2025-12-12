@@ -4,12 +4,6 @@ import { motion } from "framer-motion"
 
 const experiences = [
   {
-    period: "2024 - Present",
-    title: "Security & Customer Success",
-    company: "Apple",
-    story: "When someone's digital life gets compromised, they need more than technical fixes. They need trust rebuilt. I help people understand how to protect themselves online, turning security anxiety into confidence through patient education and clear guidance."
-  },
-  {
     period: "2023 - 2024",
     title: "AI Training & Quality Assurance",
     company: "Scale AI",
